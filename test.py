@@ -5,7 +5,7 @@ url = 'http://localhost:5000/api/send_post_request'
 
 # Define the data you want to send as a dictionary
 data = {
-    "directory": "/home/godfreykaris/Documents/CVI/test_files",
+    "directory": "/home/godfreykaris/Documents/CVI/labelled_dataset",
     "file_extensions": [".php"]
 }
 
