@@ -1,0 +1,269 @@
+Code~VulnerabilityStatus
+"$c= \"Select password from pdo.table where email=\".$username;"~0
+"$result = mysqli_query($conn,\"SELECT * FROM admins WHERE admin_email='\" . $email.\"'\");"~0
+"$resultSet2 = $mysqli->query(\"SELECT batch_code FROM student_batches  \");"~1
+"$query = \"SELECT * FROM \" . static::$tabla . \" ORDER BY id {$orden}\";"~0
+"$query = \"SELECT * FROM \" . static::$tabla  .\" WHERE id = {$id}\";"~1
+"$query = \"SELECT * FROM \" . static::$tabla . \" ORDER BY id DESC LIMIT {$limite}\" ;"~0
+"$query = \"SELECT * FROM \" . static::$tabla . \" WHERE {$columna} = '{$valor}'\";"~1
+"$query = \"SELECT * FROM \" . static::$tabla . \" ORDER BY {$columna} {$orden}\";"~0
+"$query = \"SELECT * FROM \" . static::$tabla . \" ORDER BY {$columna} {$orden} LIMIT {$limite}\";"~1
+"$query = \"SELECT * FROM \" . static::$tabla . \" WHERE \";"~0
+"$query = \" INSERT INTO \" . static::$tabla . \" (\";"~1
+"$query = \"UPDATE \" . static::$tabla .\" SET \";"~0
+"$query = \"DELETE FROM \"  . static::$tabla . \" WHERE id = \" . self::$db->escape_string($this->id) . \" LIMIT 1\";"~1
+"$query = \"SELECT COUNT(*) FROM \" . static::$tabla . \" WHERE \";"~0
+"$query = \"SELECT COUNT(*) FROM \" . static::$tabla;"~1
+"$query = \"SELECT * FROM \" . static::$tabla . \" ORDER BY id DESC LIMIT {$porPagina} OFFSET {$offset} \";"~0
+"* Create a new Attachment from a filesystem path."~0
+"$stmt = $pdo->prepare(\"INSERT INTO contacts (name,age,email) VALUES(?, ?, ?)\");"~0
+"$sql=\"SELECT username,password FROM admin WHERE username ='\".$_POST['uname'].\"' AND password='\".$_POST['password'].\"'\";"~0
+"$select_product_name = mysqli_query($conn, \"SELECT product_name FROM `products` WHERE product_name = '$product_name'\") or die('query failed');"~0
+"$add_product_query = mysqli_query($conn, \"INSERT INTO `products`(product_name, product_id, price, quantity, brand_id, image) VALUES('$product_name','$product_id', '$price','$quantity','$brand', '$image')\") or die('query failed');"~1
+"mysqli_query($conn, \"DELETE FROM `products` WHERE id = '$delete_id'\") or die('query failed');"~0
+"mysqli_query($conn, \"UPDATE `products` SET product_name = '$update_product_name',product_id = '$update_product_id',price = '$update_price',quantity = '$update_quantity',brand_id = '$update_brand' WHERE id = '$update_p_id'\") or die('query failed');"~1
+"$select_brands = mysqli_query($conn, \"SELECT brand_id, name FROM `brand`\");"~0
+"$select_products = mysqli_query($conn, \"SELECT * FROM `products`\") or die('query failed');"~1
+"$select_brand = mysqli_query($conn, \"SELECT name FROM `brand` WHERE brand_id = '\" . $fetch_products['brand_id'] . \"'\");"~0
+"$update_query = mysqli_query($conn, \"SELECT * FROM `products` WHERE id = '$update_id'\") or die('query failed');"~1
+"$select_brands = mysqli_query($conn, \"SELECT brand_id, name FROM `brand`\");"~0
+"//$query = \"INSERT INTO notifications ('customer_id', 'product_id') VALUES  ('\" . $_REQUEST['customer_id'] . \"', '\" . $_REQUEST['product_id'] . \"')\";"~0
+"$query = \"INSERT INTO notifications (`product_id`, `customer_id`) VALUES ('\".$pid.\"','\".$user.\"')\";"~1
+"if(gettype($result = $sql->execute(\"SELECT * FROM ADMIN WHERE Id='$admin' AND Password='$password'\"))==\"array\"){"~0
+"$check_cart_numbers = mysqli_query($conn, \"SELECT * FROM `cart` WHERE product_id = '$product_id' AND user_id = '$user_id'AND status = 'w'\") or die('query failed');"~0
+"mysqli_query($conn, \"INSERT INTO `cart`(user_id, product_id, product_name, quantity, status) VALUES('$user_id', '$product_id' , '$product_name' ,'$product_quantity', 'w')\") or die('query failed');"~1
+"$select_products = mysqli_query($conn, \"SELECT * FROM `products` WHERE brand_id = '2'\") or die('query failed');"~0
+"$select_brand = mysqli_query($conn, \"SELECT name FROM `brand` WHERE brand_id = '\" . $fetch_products['brand_id'] . \"'\");"~1
+"if(gettype($result = $sql->execute(\"SELECT * FROM ADMIN WHERE Id='$admin' AND Password='$password'\"))==\"array\"){"~0
+"$rows = $sql->execute(\"SELECT BId,Name From BRANCH\");"~1
+"$select_users = mysqli_query($conn, \"SELECT * FROM `users` WHERE email = '$email' AND password = '$pass'\") or die('query failed');"~0
+"mysqli_query($conn, \"INSERT INTO `users`(name, email, number, password, user_type) VALUES('$name', '$email', '$number', '$cpass', '$user_type')\") or die('query failed');"~1
+"$result  = $mysqli->query(\"SELECT * FROM tbl_contact\") or die ($mysqli->erorr);"~0
+"$select_user = $conn->query(\"SELECT * FROM users WHERE id = '$user_id'\");"~0
+"$query = 'ALTER TABLE ' . $escaper->table($this->table);"~0
+"$result = $sql->execute(\"SELECT BId, Name, Location FROM BRANCH WHERE BId like '\".$this->filter.\"' OR Name like'\".$this->filter.\"' OR Location like '\".$this->filter.\"'\");"~0
+"}else{$result = $sql->execute(\"SELECT BId, Name, Location FROM BRANCH\");}"~1
+"\"SELECT DISTINCT DocId, CopyNo, Title, PubName, Position, Name, Location FROM (BRANCH NATURAL JOIN COPY NATURAL JOIN DOCUMENT NATRUAL JOIN PUBLISHER) WHERE DocId like '%\"."~0
+"\"SELECT DISTINCT DocId, CopyNo, Title, PubName, Position, Name, Location FROM (BRANCH NATURAL JOIN COPY NATURAL JOIN DOCUMENT NATRUAL JOIN PUBLISHER)\""~1
+"* Create a new ArrayRecipientIterator from $recipients."~0
+"$sql3 = \"SELECT `id` FROM `users` WHERE `email`=:email3\";"~0
+"$sql = \"INSERT INTO payment(amount,refno,status,userid) VALUES(:amount,:refno,:status,:uid)\";"~1
+"$result = mysqli_query($conn,\"SELECT * FROM admins WHERE admin_email='\" . $email.\"'\");"~0
+"$resultSet2 = $mysqli->query(\"SELECT batch_code FROM student_batches  \");"~1
+"$query=\"INSERT INTO new_pdf (new_name,new_date) values ('$annoucemnt_name','$dateofupload')\";"~0
+"$sql = \"INSERT INTO \" . $this->table . $col . \" VALUES \" . $val;"~0
+"$sql = \"INSERT INTO \" . $this->table . $col . \" VALUES \" . $val;"~1
+"$sql .= \"INSERT INTO \" . $this->table . $col . \" VALUES \" . $val . \";\";"~0
+"$sql = \"SELECT \" . $sel . \" FROM \" . $this->table . $clause . \" \" . $order_col . \" \" . $order;"~1
+"if(gettype($result = $sql->execute(\"SELECT * FROM ADMIN WHERE Id='$admin' AND Password='$password'\"))==\"array\"){"~0
+"// Create the table"~0
+"// Create table header"~1
+"$mysqli->query(\"INSERT INTO course_details ( course_id, course_name, module_1, module_2, module_3, module_4, module_5, module_6, module_7, module_8, module_9, module_10) VALUES('$course_id','$course_name','$module_1','$module_2','$module_3','$module_4','$module_5','$module_6','$module_7','$module_8','$module_9','$module_10')\") or die($mysqli->error);"~0
+"$mysqli->query(\"DELETE FROM course_details WHERE course_id=$course_id\") or die ($mysqli->error());"~1
+"$query=\"select * from admin where admin_username='$username' AND password='$password' \";"~0
+"$query = \"UPDATE course_details SET course_id='$course_id',  course_name='$course_name', payment_1='$payment_1', payment_2='$payment_2', payment_3='$payment_3', payment_4='$payment_4', payment_5='$payment_5' WHERE course_id= $id \" ;"~0
+"$query = \"UPDATE student_batches SET batch_id='$batch_id', batch_name='$batch_name', batch_code='$batch_code', course_id='$course_id', course_id='$course_id', assignment_id='$assignment_id'  WHERE batch_id= $batch_id \" ;"~0
+"$data=\"Insert into fingoods(ref_no,client_name,order_no,order_date,prod_name,length,width,height,ply,totarea,unitprice,quantity,grandtot)"~0
+"$mysqli->query(\"INSERT INTO admins ( admin_name, admin_email, admin_password, admin_picture,  admin_year, admin_birthday, admin_NIC) VALUES('$admin_name','$admin_email','$admin_password','$admin_picture','$admin_year','$admin_birthday','$admin_NIC')\") or die($mysqli->error);"~0
+"$mysqli->query(\"DELETE FROM admins WHERE admin_id=$admin_id\") or die ($mysqli->error());"~1
+"$select_product_brand_name = mysqli_query($conn, \"SELECT name FROM `brand` WHERE name = '$name'\") or die('query failed');"~0
+"$add_brand_query = mysqli_query($conn, \"INSERT INTO `brand`(name) VALUES('$name')\") or die('query failed');"~1
+"mysqli_query($conn, \"DELETE FROM `brand` WHERE brand_id = '$delete_id'\") or die('query failed');"~0
+"mysqli_query($conn, \"UPDATE `brand` SET name = '$update_name' WHERE brand_id = '$update_b_id'\") or die('query failed');"~1
+"$select_brand = mysqli_query($conn, \"SELECT * FROM `brand`\") or die('query failed');"~0
+"$update_query = mysqli_query($conn, \"SELECT * FROM `brand` WHERE brand_id = '$update_id'\") or die('query failed');"~1
+"$sql = \"INSERT INTO product(pname,status) VALUES(:pname,:status)\";"~0
+"$sql=\"SELECT * FROM assignment where stream ='\".$stream.\"' AND year='\".$year.\"'\";"~0
+"$result  = $mysqli->query(\"SELECT * FROM products\") or die ($mysqli->erorr);"~0
+"$sql = \"INSERT INTO users(fname,lname,contact,email,status,password) VALUES(:fname,:lname,:contact,:email,:status,:password)\";"~0
+"#$sqlDropDownVatID = \"SELECT  *  FROM `tbl_vat`  group by SALE_ARRIVAL_COUNTRY ORDER by SALE_ARRIVAL_COUNTRY ASC;\";"~0
+"$sqlDropDownVatID = \"SELECT  *  FROM `tbl_vat` INNER JOIN tbl_countries ON amazon.tbl_vat.SALE_ARRIVAL_COUNTRY=tbl_countries.alpha_2 group by SALE_ARRIVAL_COUNTRY ORDER by SALE_ARRIVAL_COUNTRY ASC;\";"~1
+"$result = mysqli_query($conn,\"SELECT * FROM admins WHERE admin_email='\" . $email.\"'\");"~0
+"$tableName[] = 'SELECT * FROM ' . $this->getTableName() . '_' . ($i + 1);"~0
+"$mysqli->query(\"INSERT INTO students ( student_id, batch_id, student_fname, student_lname,  email, birthday, contactnumber,  password, NIC, picture) VALUES('$student_id','$batch_id','$student_fname','$student_lname','$email','$birthday','$contactnumber','$password','$NIC','$picture')\") or die($mysqli->error);"~0
+"$mysqli->query(\"INSERT INTO students_payments (student_id, batch_id) VALUES('$student_id','$batch_id')\") or die($mysqli->error);"~1
+"$mysqli->query(\"INSERT INTO students_results (student_id, batch_id) VALUES('$student_id','$batch_id')\") or die($mysqli->error);"~0
+"$sql1->query(\"INSERT INTO BOR_TRANSACTION VALUES(NULL,CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP() + interval '20' day,0)\");"~0
+"$sql->execute(\"DELETE FROM RESERVES WHERE DocId='\".$_GET[\"id\"].\"' AND CopyNo='\".$_GET[\"cid\"].\"' AND BId='\".$_GET[\"bid\"].\"' AND ReaderId = '\".$_SESSION['lastCardNumber'].\"'\");"~1
+"$query = $sql1->prepare(\"INSERT INTO BORROWS (BorNumber,DocId,CopyNo,BId,ReaderId) VALUES(?,?,?,?,?)\");"~0
+"\"SELECT RetDateTime FROM (BOR_TRANSACTION NATURAL JOIN BORROWS) WHERE BorNumber = '$BorID' AND DocId = '\"."~1
+"$sql1->query(\"CREATE EVENT CALC_FINE\".$BorID.\" ON SCHEDULE EVERY 1 DAY DO UPDATE BOR_TRANSACTION SET Fine = Fine + 20  WHERE BorNumber = '$BorID' AND CURRENT_TIMESTAMP() > '$result'\");"~0
+"$result = mysqli_query($conn,\"SELECT * FROM admins WHERE admin_email='\" . $email.\"'\");"~0
+"$result  = $mysqli->query(\"SELECT * FROM module_assignments\") or die ($mysqli->erorr);"~1
+"$query = \"UPDATE students_payments SET studentpayment_id='$studentpayment_id', student_id='$student_id', batch_id='$batch_id', payment1_status='$payment1_status', payment2_status='$payment2_status', payment3_status='$payment3_status', payment4_status='$payment4_status' , payment5_status='$payment5_status', final_status='$final_status'  WHERE studentpayment_id= $studentpayment_id \" ;"~0
+"$mysqli->query(\"DELETE FROM students_payments WHERE studentpayment_id=$studentpayment_id\") or die ($mysqli->error());"~1
+"$res = $con->doQuery(\"SELECT * FROM `tbl_transaction_numbers` WHERE `status` = 0 ;\");"~0
+"$sql = \"SELECT * FROM `tbl_payment` WHERE `bkash_transaction_No` = '$tran' AND `status` = 0 ;\";"~1
+"$sql = \"UPDATE `tbl_order` SET `status` = 1 WHERE `tbl_order`.`order_id` = $oid ;\";"~0
+"$sql = \"UPDATE `tbl_payment` SET `status` = 1 WHERE `tbl_payment`.`payment_id` = $pid ;\";"~1
+"$sql = \"UPDATE `tbl_transaction_numbers` SET `status` = '1' WHERE `tbl_transaction_numbers`.`transaction_number` = '$tran';\";"~0
+"$query = \"UPDATE module_assignments SET  assignmnt_id='$assignmnt_id', batch_id='$batch_id', module_1_issued='$module_1_issued', module_1_deadl='$module_1_deadl', module_2_issued='$module_2_issued', module_2_deadl='$module_2_deadl' , module_3_issued='$module_3_issued', module_3_deadl='$module_3_deadl', module_4_issued='$module_4_issued', module_4_deadl='$module_4_deadl', module_5_issued='$module_5_issued', module_5_deadl='$module_5_deadl', module_6_issued='$module_6_issued', module_6_deadl='$module_6_deadl', module_7_issued='$module_7_issued', module_7_deadl='$module_7_deadl' , module_8_issued='$module_8_issued', module_8_deadl='$module_8_deadl', module_9_issued='$module_9_issued', module_9_deadl='$module_9_deadl', module_10_issued='$module_10_issued', module_10_deadl='$module_10_deadl' WHERE assignmnt_id= $assignmnt_id \" ;"~0
+"$query = \"select LName from staff\";"~0
+"$select = mysqli_query($conn, \"SELECT * FROM `admin` WHERE `adminame` = '$username'\");"~0
+"$sql = \"INSERT INTO `admin` (`adminame`, `name`, `password`) VALUES ('$username', '$name', '$password')\";"~1
+"mysqli_query($conn, \"DELETE FROM gushi WHERE id={$id}\") or die('删除数据出错：'.mysqli_error($conn));"~0
+"$check = mysql_query(\"SELECT * FROM $this->table WHERE $args[0] = '$vals[0]' AND $args[1] = '$vals[1]' \", $this->con);"~0
+"$result = mysqli_query($conn,\"SELECT * FROM admins WHERE admin_email='\" . $email.\"'\");"~0
+"$sql = \"INSERT INTO module_assignments ( assignmnt_id, batch_id, moduleassignment_1, moduleassignment_2, moduleassignment_3, moduleassignment_4, moduleassignment_5, moduleassignment_6, moduleassignment_7, moduleassignment_8, moduleassignment_9, moduleassignment_10) VALUES ('$assignmnt_id','$batch_id','$moduleassignment_1','$moduleassignment_2','$moduleassignment_3','$moduleassignment_4','$moduleassignment_5','$moduleassignment_6','$moduleassignment_7','$moduleassignment_8','$moduleassignment_9','$moduleassignment_10' )\";"~0
+"$mysqli->query(\"DELETE FROM module_assignments WHERE assignmnt_id= $assignmnt_id\") or die ($mysqli->error());"~1
+"$query=\"select * from record where emp_id='$id' AND date1='$date1' order by 1 desc \";"~0
+"$data=\"Insert into fingoods(ref_no,client_name,order_no,order_date,prod_name,length,width,height,ply,totarea,unitprice,quantity,grandtot,status)"~0
+"$q=\"select * from professor where pid in (select pid from profaoi)\";"~0
+"$result = mysqli_query($conn,\"SELECT * FROM admins WHERE admin_email='\" . $email.\"'\");"~0
+"$resultSet2 = $mysqli->query(\"SELECT batch_code FROM student_batches  \");"~1
+"$result = mysqli_query($conn,\"SELECT * FROM admins WHERE admin_email='\" . $_POST[\"username\"] . \"' and admin_password = '\". $_POST[\"password\"].\"'\");"~0
+"$select_admin = $conn->query(\"SELECT * FROM users WHERE id = '$admin_id'\");"~0
+"mysqli_query($conn, \"UPDATE gushi SET title='$title',author='$author',content='$content' WHERE id=$id\") or die('修改数据出错：'.mysqli_error($conn));"~0
+"DROP TABLE IF EXISTS `think_auth_rule`;"~0
+"CREATE TABLE `think_auth_rule` ("~1
+"DROP TABLE IF EXISTS `think_auth_group`;"~0
+"CREATE TABLE `think_auth_group` ("~1
+"DROP TABLE IF EXISTS `think_auth_group_access`;"~0
+"CREATE TABLE `think_auth_group_access` ("~1
+"$result  = $mysqli->query(\"SELECT * FROM customer\") or die ($mysqli->erorr);"~0
+"$updateSQL = sprintf(\"UPDATE data_evento SET px_evento=%s WHERE id=%s\","~0
+"$query_RsAtualData = \"SELECT * FROM data_evento ORDER BY px_evento ASC\";"~1
+"$insert_sql = \"INSERT INTO `watches` (`wname`, `brand`, `os`, `color`, `sfeature`, `wimg`, `price`, `units`, `descri`) VALUES ('$wname','$brand','$os','$color','$sfeature', '$image','$price', '$units', '$descri')\";"~0
+"$q2=\"select * from professor\";"~0
+"$q3_run=mysql_query(\"select * from profaoi where pid='{$row2['pid']}'\") or die(mysql_error());"~1
+"$sql = \"SELECT * FROM report\";"~0
+"$sql = \"SELECT * FROM report WHERE id = \" .  $_GET['id'];"~1
+"$sql = \"INSERT INTO login ( name, number, email, address, username, password ) VALUES ( '{$mysqli->real_escape_string($_POST['name'])}',"~0
+"$query = \"UPDATE students SET student_id='$student_id', batch_id='$batch_id', student_fname='$student_fname', student_lname='$student_lname', email='$email', birthday='$birthday' , contactnumber='$contactnumber', password='$password' , NIC='$NIC' WHERE student_id= $student_id \" ;"~0
+"$mysqli->query(\"DELETE FROM students_results WHERE student_id=$student_id\")  or die(mysqli_error($mysqli));"~1
+"$mysqli->query(\"DELETE FROM students_payments WHERE student_id=$student_id\")  or die(mysqli_error($mysqli));"~0
+"$mysqli->query(\"DELETE FROM students WHERE student_id=$student_id\")  or die(mysqli_error($mysqli));"~1
+"$query = \"UPDATE students SET picture='$picture' WHERE student_id= $student_id \" ;"~0
+"$result = mysqli_query($conn,\"SELECT * FROM admins WHERE admin_email='\" . $email.\"'\");"~0
+"$result  = $mysqli->query(\"SELECT * FROM student_batches \") or die ($mysqli->erorr);"~1
+"$query = \"Select * from person\";"~0
+"$sql=\"SELECT * FROM notice\";"~0
+"$query2=\"SELECT * FROM matches \";"~0
+"$sql = \"INSERT INTO services(sname,pid,status,price) VALUES(:sname,:pid,:status,:price)\";"~0
+"<?php $ret = \"SELECT `id`,`pname` FROM `product`\";"~1
+"$sql = \"INSERT INTO $subject (question,chepter,difficulty,marks,username)"~0
+"$query=\"INSERT INTO profil_team (team_name,adminstrator,phone,location,map_url,region,email) values"~0
+"$query2=\"INSERT INTO ranking2 (team_name,points,play,gf,ga,di,birth,region) values"~1
+"$query3=\"INSERT INTO ranking2 (team_name,points,play,gf,ga,di,birth,region) values"~0
+"$query4=\"INSERT INTO ranking2 (team_name,points,play,gf,ga,di,birth,region) values"~1
+"$query5=\"INSERT INTO ranking2 (team_name,points,play,gf,ga,di,birth,region) values"~0
+"$data=\"Insert into purchaseitem(purchase_code,supplier_name,challan_no,purchase_date,item_type,item_name,brand_name,unit_price,quantity,grand_tot)"~0
+"$checkCode = $database->prepare(\"SELECT SECURITY_CODE FROM users WHERE SECURITY_CODE = :SECURITY_CODE\");"~0
+"$update = $database->prepare(\"UPDATE users SET SECURITY_CODE = :NEWSECURITY_CODE ,"~1
+"$query = \"UPDATE admins SET admin_name='$admin_name', admin_email='$admin_email', admin_password='$admin_password', admin_picture='$admin_picture', admin_year='$admin_year', admin_birthday='$admin_birthday' , admin_NIC='$admin_NIC' WHERE admin_id= $id \" ;"~0
+"$query = \"UPDATE course_details SET course_id='$course_id', course_name='$course_name', module_1='$module_1', module_2='$module_2', module_3='$module_3', module_4='$module_4', module_5='$module_5', module_6='$module_6', module_7='$module_7', module_8='$module_8', module_9='$module_9', module_10='$module_10' WHERE course_id= $id \" ;"~0
+"$q1=\"select * from profaoi where pid='{$id}' and area='{$a}'\";"~0
+"$query=\"insert into profaoi(pid,area) values('{$id}','{$a}')\";"~1
+"$sql = \"INSERT INTO admin(username,password)"~0
+"$que=\"INSERT INTO results (first_team,first_team_result,second_team,second_team_result,match_date,birth,region) values"~0
+"$qq1=\"select * from ranking2 where team_name='$fteam' and birth='$birthd' and region='$reg' \";"~1
+"$q1update=\"update ranking2 set play='$play' , points='$pointss' , gf='$gff' , ga='$gaa' ,di='$dif' where team_name='$fteam' and birth='$birthd' and region='$reg' \";"~0
+"$qq2=\"select * from ranking2 where team_name='$steam' and birth='$birthd' and region='$reg' \";"~1
+"$q1update2=\"update ranking2 set play='$play2' , gf='$gff2' , ga='$gaa2' ,di='$dif2' where team_name='$steam' and birth='$birthd' and region='$reg' \";"~0
+"$qq1=\"select * from ranking2 where team_name='$steam' and birth='$birthd' and region='$reg' \";"~1
+"$q1update=\"update ranking2 set play='$play' , points='$pointss' , gf='$gff' , ga='$gaa' ,di='$dif' where team_name='$steam' and birth='$birthd' and region='$reg' \";"~0
+"$qq2=\"select * from ranking2 where team_name='$fteam' and birth='$birthd' and region='$reg' \";"~1
+"$q1update2=\"update ranking2 set play='$play2' , gf='$gff2' , ga='$gaa2' ,di='$dif2' where team_name='$fteam' and birth='$birthd' and region='$reg' \";"~0
+"$qq1=\"select * from ranking2 where team_name='$fteam' and birth='$birthd' and region='$reg' \";"~1
+"$q1update=\"update ranking2 set play='$play' , points='$pointss' , gf='$gff' , ga='$gaa' ,di='$dif' where team_name='$fteam' and birth='$birthd' and region='$reg' \";"~0
+"$qq2=\"select * from ranking2 where team_name='$steam' and birth='$birthd' and region='$reg' \";"~1
+"$q1update2=\"update ranking2 set play='$play2' ,points='$pointss2' , gf='$gff2' , ga='$gaa2' ,di='$dif2' where team_name='$steam' and birth='$birthd' and region='$reg' \";"~0
+"$q1=\"SELECT * FROM profil_team order by region \";"~1
+"$q2=\"SELECT * FROM profil_team order by region \";"~0
+"$sql= \"select * from assignment\";"~0
+"$sql= \"select * from assignment where stream='\".$_POST['stream'].\"'and year='\".$_POST['year'].\"' order by date desc\";"~1
+"$result = mysqli_query($conn,\"SELECT * FROM admins WHERE admin_email='\" . $email.\"'\");"~0
+"$resultSet2 = $mysqli->query(\"SELECT batch_code FROM student_batches  \");"~1
+"$q1=\"delete from profaoi where pid='{$_SESSION['idp']}' and area='{$x}'\";"~0
+"$q=\"select * from profaoi where pid='{$id}'\";"~1
+"CREATE TABLE Pet ("~0
+"ALTER TABLE Pet ("~1
+"DELETE TABLE Pet"~0
+"$stmt = $dbCon->prepare(\"INSERT INTO Pet(petname, age, city) VALUES(?, ?, ?)\");"~1
+"$stmt = $dbCon->prepare(\"SELECT * FROM Pet\");"~0
+"$stmt = $dbCon->prepare(\"SELECT * FROM Pet WHERE id = ?\");"~1
+"$stmt = $dbCon->prepare(\"UPDATE Pet SET petname = ?, age = ?, city = ? WHERE id = ?\");"~0
+"$stmt = $dbCon->prepare(\"DELETE FROM Pet WHERE id = ?\");"~1
+"$sql3 = \"SELECT `id` FROM `users` WHERE `email`=:email3\";"~0
+"$sql = \"INSERT INTO repairs(sid,pid,status,price,userid) VALUES(:sid,:pid,:status,:price,:uid)\";"~1
+"<?php $ret=\"select id, pname from product\";"~0
+"$sql = \"SELECT * from system\";"~1
+"<?php $sql = \"SELECT payment.*, users.fname, users.lname FROM payment inner join users on users.id=payment.userid  WHERE payment.`status`=0\";"~0
+"$stmt = $DB_con->prepare('INSERT INTO tbl_users(userName,userProfession,userPic) VALUES(:uname, :ujob, :upic)');"~0
+"$query = \"INSERT INTO `user`(`fname`, `lname`, `email`, `pass`, `img`) VALUES ('$fname','$lname','$mail','$passw','$imgname')\";"~0
+"$query2 = \"DELETE FROM `user` WHERE `slno`=\".$_SESSION['id'];"~1
+"$query = \"UPDATE `user` SET `fname`='$friname', `lname`='$lstname', `email`='$mailv' WHERE `slno`=\".$_SESSION['id'];"~0
+"$res=$obj->fetch(\"update user SET status='1' WHERE id=\".$_GET['id']);"~0
+"$sql=\"SELECT * FROM classnote where stream ='\".$stream.\"' AND year='\".$year.\"'\";"~0
+"$query = \"UPDATE students_results SET studentresult_id='$studentresult_id', student_id='$student_id', batch_id='$batch_id', subject1_results='$subject1_results', subject2_results='$subject2_results', subject3_results='$subject3_results', subject4_results='$subject4_results' , subject5_results='$subject5_results', subject6_results='$subject6_results', subject7_results='$subject7_results', subject8_results='$subject8_results', subject9_results='$subject9_results' , subject10_results='$subject10_results', final__status='$final__status'  WHERE studentresult_id= $studentresult_id \" ;"~0
+"$mysqli->query(\"DELETE FROM students_results WHERE studentresult_id=$studentresult_id\") or die ($mysqli->error());"~1
+"$q1=\"update profaoi set nos='{$size[$i]}' where pid='{$_GET['id']}' and area='{$a}'\";"~0
+"$q=\"select * from profaoi where pid='{$id}'\";"~1
+"$sql=\"SELECT services.*, product.pname FROM services INNER JOIN product on product.id=services.pid  AND services.status=:status ORDER BY services.id DESC LIMIT 50\";"~0
+"$sql = \"SELECT * FROM services where services.status=:status\";"~1
+"$sql = \"SELECT * FROM `admin` WHERE  `adminame` = '$username' AND `password` = '$password'\";"~0
+"$sql = \"UPDATE `{$this->table}` SET \";"~0
+"$sql = \"DELETE FROM `{$this->table}`"~1
+"$sql = \"INSERT INTO `{$this->table}`"~0
+"//Create a date from string"~0
+"$sql = \"INSERT INTO payment(amount,refno,status,userid) VALUES(:amount,:refno,:status,:userid)\";"~0
+"<?php $ret=\"select id, fname,lname from users\";"~1
+"$que=\"INSERT INTO matches (first_team,second_team,match_date,match_time,birth,staduim,region) values"~0
+"$q1=\"SELECT * FROM profil_team order by region\";"~1
+"$q2=\"SELECT * FROM profil_team order by region\";"~0
+"* Create a new CharacterStream with the given $chars, if set."~0
+"$query = \"SELECT * FROM services WHERE pid = \".$_POST['productId'];"~0
+"$query = \"SELECT * FROM services WHERE services.id = \".$_POST['serviceId'];"~1
+"$result = mysqli_query($conn,\"SELECT * FROM admins WHERE admin_email='\" . $email.\"'\");"~0
+"$result  = $mysqli->query(\"SELECT * FROM course_details \") or die ($mysqli->erorr);"~1
+"$SQL = \"SELECT * FROM report\";"~0
+"$sql = \"SELECT id,isFarmer FROM farm WHERE username = '\" . $_POST['USERNAME'] . \"' AND password = '\" . $_POST['PASSWORD'] . \"' LIMIT 1\";"~1
+"$result = mysqli_query($conn,\"SELECT * FROM admins WHERE admin_email='\" . $email.\"'\");"~0
+"$result  = $mysqli->query(\"SELECT * FROM module_assignments\") or die ($mysqli->erorr);"~1
+"$result = mysqli_query($conn,\"SELECT * FROM admins WHERE admin_email='\" . $email.\"'\");"~0
+"$result  = $mysqli->query(\"SELECT * FROM admins \") or die ($mysqli->erorr);"~1
+"$statement = $pdo->prepare(\"INSERT INTO todo_list VALUES(DEFAULT, :name, :done)\");"~0
+"mysqli_query($conn, \"UPDATE `orders` SET payment_status = '$update_payment' , shipment_date = '$shipment_date' WHERE id = '$order_update_id'\") or die('query failed');"~0
+"mysqli_query($conn, \"UPDATE `orders` SET shipment_date = '$shipment_date' WHERE id = '$order_update_id'\") or die('query failed');"~1
+"mysqli_query($conn, \"UPDATE `orders` SET payment_status = '$update_payment' , received_date = '$received_date' WHERE id = '$order_update_id'\") or die('query failed');"~0
+"mysqli_query($conn, \"UPDATE `orders` SET received_date = '$received_date' WHERE id = '$order_update_id'\") or die('query failed');"~1
+"mysqli_query($conn, \"UPDATE `orders` SET payment_status = '$update_payment' , payment_date = '$payment_date' WHERE id = '$order_update_id'\") or die('query failed');"~0
+"mysqli_query($conn, \"UPDATE `orders` SET payment_date = '$payment_date' WHERE id = '$order_update_id'\") or die('query failed');"~1
+"mysqli_query($conn, \"UPDATE `orders` SET payment_status = '$update_payment' WHERE id = '$order_update_id'\") or die('query failed');"~0
+"mysqli_query($conn, \"DELETE FROM `orders` WHERE id = '$delete_id'\") or die('query failed');"~1
+"$select_orders = mysqli_query($conn, \"SELECT * FROM `orders` WHERE payment_status='$status'\") or die('query failed');"~0
+"$select_orders = mysqli_query($conn, \"SELECT * FROM `orders`\") or die('query failed');"~1
+"$data=\"Insert into working(ref_no,client_name,order_no,order_date,item_name,unitprice,quantity,grandtot)"~0
+"$select_admin = $conn->query(\"SELECT * FROM users WHERE id = '$admin_id'\");"~0
+"$select_orders = mysqli_query($conn, \"SELECT * FROM orders WHERE payment_status = 'wadmin'\") or die('query failed');"~1
+"$select_orders = mysqli_query($conn, \"SELECT * FROM orders WHERE payment_status = 'wdelivery'\") or die('query failed');"~0
+"$select_orders = mysqli_query($conn, \"SELECT * FROM orders WHERE payment_status = 'finish'\") or die('query failed');"~1
+"$select_orders = mysqli_query($conn, \"SELECT * FROM orders WHERE payment_status = 'rproduct'\") or die('query failed');"~0
+"$select_orders = mysqli_query($conn, \"SELECT * FROM orders WHERE payment_status = 'rpd'\") or die('query failed');"~1
+"$select_quantity = mysqli_query($conn, \"SELECT SUM(quantity) as total_quantity FROM `products`\");"~0
+"$select_users = mysqli_query($conn, \"SELECT * FROM `users` WHERE user_type = 'user'\") or die('query failed');"~1
+"$select_users = mysqli_query($conn, \"SELECT * FROM `users` WHERE user_type = 'admin'\") or die('query failed');"~0
+"$select_account = mysqli_query($conn, \"SELECT * FROM `users`\") or die('query failed');"~1
+"$mysqli->query(\"INSERT INTO module_assignments (assignmnt_id, batch_id, module_1_issued, module_1_deadl, module_2_issued, module_2_deadl, module_3_issued, module_3_deadl, module_4_issued, module_4_deadl, module_5_issued, module_5_deadl, module_6_issued, module_6_deadl, module_7_issued, module_7_deadl, module_8_issued, module_8_deadl, module_9_issued, module_9_deadl, module_10_issued, module_10_deadl ) VALUES('$assignmnt_id','$batch_id','$module_1_issued','$module_1_deadl','$module_2_issued','$module_2_deadl','$module_3_issued','$module_3_deadl','$module_4_issued','$module_4_deadl','$module_5_issued','$module_5_deadl','$module_6_issued','$module_6_deadl','$module_7_issued','$module_7_deadl','$module_8_issued','$module_8_deadl','$module_9_issued','$module_9_deadl','$module_10_issued','$module_10_deadl') \") or die($mysqli->error);"~0
+"$mysqli->query(\"DELETE FROM module_assignments WHERE assignmnt_id= $assignmnt_id\") or die ($mysqli->error());"~1
+"mysqli_query($conn, \"DELETE FROM `users` WHERE id = '$delete_id'\") or die('query failed');"~0
+"$select_users = mysqli_query($conn, \"SELECT * FROM `users` WHERE user_type='$status'\") or die('query failed');"~1
+"$select_users = mysqli_query($conn, \"SELECT * FROM `users`\") or die('query failed');"~0
+"$mysqli->query(\"INSERT INTO course_details ( course_id,  course_name, payment_1, payment_2, payment_3, payment_4, payment_5) VALUES('$course_id' ,'$course_name','$payment_1','$payment_2','$payment_3','$payment_4','$payment_5')\") or die($mysqli->error);"~0
+"$mysqli->query(\"DELETE FROM course_details WHERE course_id=$course_id\") or die ($mysqli->error());"~1
+"$result = mysqli_query($con, \"SELECT * FROM doctor_view WHERE email_id = '\" . $email. \"' and password = '\" .$password. \"' and emp_id = 'doc101' \");"~0
+"$mysqli->query(\"INSERT INTO module_assignments (assignmnt_id ,batch_id ) VALUES('$batch_id','$assignment_id')\") or die($mysqli->error);"~0
+"$mysqli->query(\"INSERT INTO student_batches ( batch_id, batch_name, batch_code, course_id, assignment_id  )VALUES('$batch_id','$batch_name','$batch_code','$course_id' ,'$assignment_id')\") or die($mysqli->error);"~1
+"$mysqli->query(\"DELETE FROM student_batches WHERE batch_id=$batch_id\") or die ($mysqli->error());"~0
+"$mysqli->query(\"DELETE FROM module_assignments WHERE batch_id=$batch_id\") or die ($mysqli->error());"~1
+"$result = mysqli_query($conn_id, \"select Address, Tel_No from staff where LName = '$stafflname'\")"~0
+"$que=\"INSERT INTO results (first_team,first_team_result,second_team,second_team_result,match_date,birth,region) values"~0
+"$query=\"SELECT * FROM profil_team WHERE team_id='$val'\";"~1
+"$stmt = $DB_con->prepare('INSERT INTO tbl_users(userName,userreport,userPic) VALUES(:uname, :ujob, :upic)');"~0
+"mysqli_query($conn, \"INSERT INTO gushi(title,author,content) VALUES ('$title','$author','$content')\");"~0
+"$data=\"Insert into issueitem(issuecode,suppname,chalno,issuedate,itemtype,itemname,brandname,unitprice,quantity,grandtot)"~0
+"<?php  $get_pro = \"select * from products\";"~0
+"$result  = $mysqli->query(\"SELECT * FROM tblusers\") or die ($mysqli->erorr);"~0
+"$result = mysqli_query($conn,\"SELECT * FROM admins WHERE admin_email='\" . $email.\"'\");"~0
+"$result  = $mysqli->query(\"SELECT * FROM course_details \") or die ($mysqli->erorr);"~1
+"$query = \"UPDATE module_assignments SET assignmnt_id=?, batch_id=?, \";"~0
