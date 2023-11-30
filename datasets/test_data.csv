@@ -1,0 +1,4 @@
+50~"$stmt = $pdo->prepare(\"INSERT INTO contacts (name,age,email) VALUES(?, ?, ?)\");"~"ab/bv.php"
+3~"$sql=\"SELECT username,password FROM admin WHERE username ='\".$_POST['uname'].\"' AND password='\".$_POST['password'].\"'\";"~"qa/jc.php"
+22~"$select_product_name = mysqli_query($conn, \"SELECT product_name FROM `products` WHERE product_name = '$product_name'\") or die('query failed');"~"m/nt.php"
+14~"$add_product_query = mysqli_query($conn, \"INSERT INTO `products`(product_name, product_id, price, quantity, brand_id, image) VALUES('$product_name','$product_id', '$price','$quantity','$brand', '$image')\") or die('query failed');"~"j/ee.php"
