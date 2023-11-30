@@ -9,8 +9,11 @@ base_url = "http://127.0.0.1:8000/api"
 file_name = "test_data.csv"
 file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../datasets", file_name))
 
-# Make a GET request to the /process_file/ endpoint
-response = requests.get(f"{base_url}/process_file/", params={"file_path": file_path})
+# Make a POST request to the /process_file/ endpoint
+response = requests.post(
+    f"{base_url}/process_file/",
+    json={"file_path": file_path}  # Sending file_path in the JSON body
+)
 
 # Check the response status code
 if response.status_code == 200:

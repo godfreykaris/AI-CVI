@@ -1,8 +1,10 @@
+import asyncio
 import json
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pathlib import Path
 import pandas as pd
 import httpx
+import time
 
 from typing import List, Dict, Union
 from pydantic import BaseModel
@@ -15,15 +17,19 @@ model = get_model_instance()
 data_preprocessor = get_data_preprocessor_instance()
 ai = get_ai_instance(model=model)
 
-def validate_file_path(file_path: str = Query(..., description="Path to the CSV file to be processed")):
-    path = Path(file_path)
-    if not path.is_file():
-        raise HTTPException(status_code=400, detail="Invalid file path")
-    return path
+# Global variable to keep track of the number of files sent for processing
+files_sent_count = 0
 
-@router.get("/process_file/")
-async def process_file(file_path: Path = Depends(validate_file_path)):
+@router.post("/process_file")
+async def process_file(file_data: dict):
+    global files_sent_count
+
     try:
+        file_path = file_data.get("file_path")
+        
+        if not file_path:
+            raise HTTPException(status_code=400, detail="File path not provided in the request body")
+        
         encoded_sentences_tn, _ = data_preprocessor.process_dataset(file_path)
         predictions = ai.perform_inference(encoded_sentences_tn)
         vulnerability_predictions = predictions.tolist()
@@ -33,8 +39,12 @@ async def process_file(file_path: Path = Depends(validate_file_path)):
         result = [{"Line": line,"File": file, "Code": code, "VulnerabilityPrediction": prediction} for line, file, code, prediction in zip(df['Line'], df['File'], df['Code'], vulnerability_predictions)]
 
         await send_result_to_ui(result)
+        time.sleep(2)
+	
+         # Increment the global variable after processing a file
+        files_sent_count += 1
 
-        return {"results": result}
+        return {"results": "File Processed"}
     
     except UISendError as e:       
         raise HTTPException(status_code=e.status_code, detail=e.detail)
@@ -53,7 +63,39 @@ class UISendError(Exception):
 
 async def send_result_to_ui(result: List[Dict[str, Union[str, int]]]):
     async with httpx.AsyncClient() as client:
-        response = await client.post(f"{UI_URL}/display_result/", json={"data": result})
+        response = await client.post(f"{UI_URL}/ReceiveDataFromAI", json={"data": result})
+
+    if response.status_code != 200:
+        raise UISendError(response.status_code, response.text)
+
+@router.post("/start_processing")
+async def start_processing(request_data: dict):
+    global files_sent_count
+    
+    files_sent_count = 0
+
+    return {"message": "Started"}
+
+@router.post("/report_task_complete")
+async def report_task_complete(request_data: dict):
+    global files_sent_count
+    
+    total_files = request_data.get("total_files", 0)
+    
+    while files_sent_count < total_files:
+        # Sleep for 5 seconds before checking again
+        await asyncio.sleep(5)
+        print("Waiting")
+
+    print(f"Done S: {files_sent_count} T: {total_files}")
+    
+    await send_job_complete_to_ui()
+
+    return {"message": "Job complete"}
+
+async def send_job_complete_to_ui():
+    async with httpx.AsyncClient() as client:
+        response = await client.post(f"{UI_URL}/ReportWorkComplete")
 
     if response.status_code != 200:
         raise UISendError(response.status_code, response.text)
@@ -61,7 +103,7 @@ async def send_result_to_ui(result: List[Dict[str, Union[str, int]]]):
 @router.post("/display_result/")
 async def display_result(request: ResultRequest):
     data = request.data
-    print(data)
+    print("Data sent")
     return {"data": data}
 
 @router.get("/")
